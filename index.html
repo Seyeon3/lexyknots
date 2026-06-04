@@ -11,7 +11,6 @@
     />
   </head>
   <body>
-    <!-- ========== HEADER ========== -->
     <header class="site-header">
       <a href="#" class="logo">
         <img src="/image/logo.jpg" alt="LexyKnots Logo" />
@@ -27,22 +26,11 @@
       </nav>
     </header>
 
-    <!-- ========== HERO ========== -->
     <section class="hero">
-      <span class="floatie" style="top: 10%; left: 5%; animation-delay: 0s"
-        >🍓</span
-      >
-      <span class="floatie" style="top: 15%; right: 8%; animation-delay: 0.5s"
-        >🌸</span
-      >
-      <span class="floatie" style="bottom: 20%; left: 12%; animation-delay: 1s"
-        >⭐</span
-      >
-      <span
-        class="floatie"
-        style="bottom: 15%; right: 5%; animation-delay: 1.5s"
-        >🌈</span
-      >
+      <span class="floatie" style="top: 10%; left: 5%; animation-delay: 0s">🍓</span>
+      <span class="floatie" style="top: 15%; right: 8%; animation-delay: 0.5s">🌸</span>
+      <span class="floatie" style="bottom: 20%; left: 12%; animation-delay: 1s">⭐</span>
+      <span class="floatie" style="bottom: 15%; right: 5%; animation-delay: 1.5s">🌈</span>
 
       <div class="hero__badge">✨ Handmade with love in the Philippines</div>
       <h1 class="hero__title">Crochet that tells<br />your story 🧶</h1>
@@ -52,36 +40,20 @@
       </p>
       <button
         class="btn btn--dark"
-        onclick="
-          document
-            .getElementById('products')
-            .scrollIntoView({ behavior: 'smooth' })
-        "
+        onclick="document.getElementById('products').scrollIntoView({ behavior: 'smooth' })"
       >
         Shop Now →
       </button>
     </section>
 
-    <!-- ========== CATEGORY FILTER ========== -->
     <div class="categories">
-      <button class="cat-pill active" onclick="filterCat('all', this)">
-        All Items
-      </button>
-      <button class="cat-pill" onclick="filterCat('bucket-hat', this)">
-        Bucket Hats
-      </button>
-      <button class="cat-pill" onclick="filterCat('beanie', this)">
-        Beanies
-      </button>
-      <button class="cat-pill" onclick="filterCat('keychain', this)">
-        Keychains
-      </button>
-      <button class="cat-pill" onclick="filterCat('custom', this)">
-        Custom Orders
-      </button>
+      <button class="cat-pill active" onclick="filterCat('all', this)">All Items</button>
+      <button class="cat-pill" onclick="filterCat('bucket-hat', this)">Bucket Hats</button>
+      <button class="cat-pill" onclick="filterCat('beanie', this)">Beanies</button>
+      <button class="cat-pill" onclick="filterCat('keychain', this)">Keychains</button>
+      <button class="cat-pill" onclick="filterCat('custom', this)">Custom Orders</button>
     </div>
 
-    <!-- ========== PRODUCTS ========== -->
     <section class="products" id="products">
       <div class="section-title">
         <h2>Our Collection 💕</h2>
@@ -89,283 +61,153 @@
       </div>
 
       <div class="product-grid">
-        <!-- Card 1 -->
         <div class="card" data-cat="crochet-flower">
           <div class="card__img-wrap">
-            <img
-              src="/image/tulips.jpg"
-              alt="Crochet Flower Bouquet"
-              class="card__img"
-            />
+            <img src="/image/tulips.jpg" alt="Crochet Flower Bouquet" class="card__img" />
             <span class="badge badge--preorder">Pre-Order</span>
           </div>
-
           <div class="card__body">
             <h3 class="card__name">Crochet Flower Bouquet</h3>
             <p class="card__desc">
-              Handmade crochet flower bouquet featuring sunflower, tulip, and
-              rose designs. A perfect gift for birthdays, anniversaries, and
-              special occasions.
+              Handmade crochet flower bouquet featuring sunflower, tulip, and rose designs. A perfect gift for birthdays, anniversaries, and special occasions.
             </p>
-
             <div class="card__footer">
               <span class="price">₱299 <small>/ bouquet</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Crochet Flower Bouquet', 299)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Crochet Flower Bouquet', 299)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="card" data-cat="bucket-hat">
           <div class="card__img-wrap">
-            <img
-              src="/image/buckethat.jpg"
-              alt="Strawberry Bucket Hat"
-              class="card__img card__img--bottom"
-            />
+            <img src="/image/buckethat.jpg" alt="Strawberry Bucket Hat" class="card__img card__img--bottom" />
             <span class="badge badge--preorder">Pre-Order</span>
           </div>
           <div class="card__body">
             <h3 class="card__name">Strawberry Bucket Hat</h3>
-            <p class="card__desc">
-              Red, peach & white strawberry-themed hats with polka dots and leaf
-              detail.
-            </p>
+            <p class="card__desc">Red, peach & white strawberry-themed hats with polka dots and leaf detail.</p>
             <div class="card__footer">
               <span class="price">₱400 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Strawberry Bucket Hat', 400)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Strawberry Bucket Hat', 400)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="card" data-cat="bucket-hat">
           <div class="card__img-wrap">
-            <img
-              src="/image/strawberry-shortcake.jpg"
-              alt="Strawberry Shortcake Hat"
-              class="card__img"
-            />
+            <img src="/image/strawberry-shortcake.jpg" alt="Strawberry Shortcake Hat" class="card__img" />
             <span class="badge badge--preorder">Pre-Order</span>
           </div>
           <div class="card__body">
             <h3 class="card__name">Strawberry Shortcake Hat</h3>
-            <p class="card__desc">
-              White bucket hat with cherry & stem detail. Choose or customize
-              your base color!
-            </p>
+            <p class="card__desc">White bucket hat with cherry & stem detail. Choose or customize your base color!</p>
             <div class="card__footer">
               <span class="price">₱400 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Strawberry Shortcake Hat', 400)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Strawberry Shortcake Hat', 400)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="card" data-cat="beanie">
           <div class="card__img-wrap">
-            <img
-              src="/image/spiderman.jpg"
-              alt="Spiderman Beanie"
-              class="card__img"
-            />
+            <img src="/image/spiderman.jpg" alt="Spiderman Beanie" class="card__img" />
             <span class="badge badge--preorder">Pre-Order</span>
           </div>
           <div class="card__body">
             <h3 class="card__name">Spiderman Beanie</h3>
-            <p class="card__desc">
-              Red, black, or white base with iconic Spiderman eye detail. Pick
-              your Spidey!
-            </p>
+            <p class="card__desc">Red, black, or white base with iconic Spiderman eye detail. Pick your Spidey!</p>
             <div class="card__footer">
               <span class="price">₱450 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Spiderman Beanie', 450)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Spiderman Beanie', 450)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 5 -->
         <div class="card" data-cat="bucket-hat custom">
           <div class="card__img-wrap">
-            <img
-              src="/image/sunflower-hat.jpg"
-              alt="Custom Sunflower Bucket Hat"
-              class="card__img"
-            />
+            <img src="/image/sunflower-hat.jpg" alt="Custom Sunflower Bucket Hat" class="card__img" />
             <span class="badge badge--custom">Custom</span>
           </div>
           <div class="card__body">
             <h3 class="card__name">Custom Sunflower Bucket Hat</h3>
-            <p class="card__desc">
-              Any color base with a hand-crocheted sunflower appliqué. Fully
-              customizable!
-            </p>
+            <p class="card__desc">Any color base with a hand-crocheted sunflower appliqué. Fully customizable!</p>
             <div class="card__footer">
               <span class="price">₱450 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Custom Sunflower Bucket Hat', 450)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Custom Sunflower Bucket Hat', 450)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 6 -->
         <div class="card" data-cat="bucket-hat">
           <div class="card__img-wrap">
-            <img
-              src="/image/bear.jpg"
-              alt="We Bare Bears Panda Hat"
-              class="card__img"
-            />
+            <img src="/image/bear.jpg" alt="We Bare Bears Panda Hat" class="card__img" />
             <span class="badge badge--onhand">On Hand</span>
           </div>
           <div class="card__body">
             <h3 class="card__name">We Bare Bears Panda Hat</h3>
-            <p class="card__desc">
-              Iconic panda face bucket hat crocheted in black & white. Ready to
-              ship!
-            </p>
+            <p class="card__desc">Iconic panda face bucket hat crocheted in black & white. Ready to ship!</p>
             <div class="card__footer">
               <span class="price">₱500 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Panda Bucket Hat', 500)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Panda Bucket Hat', 500)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 7 -->
         <div class="card" data-cat="keychain custom">
           <div class="card__img-wrap">
-            <img
-              src="/image/character.jpg"
-              alt="Character Keychain"
-              class="card__img"
-            />
+            <img src="/image/character.jpg" alt="Character Keychain" class="card__img" />
             <span class="badge badge--custom">Custom</span>
           </div>
           <div class="card__body">
             <h3 class="card__name">Character Keychain</h3>
-            <p class="card__desc">
-              Adorable chibi-style crochet heads. Customize hair, skin tone, and
-              features!
-            </p>
+            <p class="card__desc">Adorable chibi-style crochet heads. Customize hair, skin tone, and features!</p>
             <div class="card__footer">
               <span class="price">₱250 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Character Keychain', 250)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Character Keychain', 250)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card 8 -->
         <div class="card" data-cat="keychain">
           <div class="card__img-wrap">
-            <img
-              src="/image/keychain-tulips.jpg"
-              alt="Crochet Tulip Keychain"
-              class="card__img"
-            />
+            <img src="/image/keychain-tulips.jpg" alt="Crochet Tulip Keychain" class="card__img" />
             <span class="badge badge--new">New</span>
           </div>
-
           <div class="card__body">
             <h3 class="card__name">Crochet Tulip Keychain</h3>
-            <p class="card__desc">
-              Handmade crochet tulip keychains available in various colors.
-              Perfect for bags, keys, giveaways, and special gifts.
-            </p>
-
+            <p class="card__desc">Handmade crochet tulip keychains available in various colors. Perfect for bags, keys, giveaways, and special gifts.</p>
             <div class="card__footer">
               <span class="price">₱99 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Crochet Tulip Keychain', 99)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Crochet Tulip Keychain', 99)">Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Card -->
         <div class="card" data-cat="keychain">
           <div class="card__img-wrap">
-            <img
-              src="/image/sun-earth-keychain.jpg"
-              alt="Sun and Earth Crochet Keychain"
-              class="card__img"
-            />
+            <img src="/image/sun-earth-keychain.jpg" alt="Sun and Earth Crochet Keychain" class="card__img" />
             <span class="badge badge--new">New</span>
           </div>
-
           <div class="card__body">
             <h3 class="card__name">Sun & Earth Crochet Keychain</h3>
-            <p class="card__desc">
-              Handmade crochet sun and earth keychains with cute smiling faces.
-              Perfect for bags, keys, gifts, and matching accessories.
-            </p>
-
+            <p class="card__desc">Handmade crochet sun and earth keychains with cute smiling faces. Perfect for bags, keys, gifts, and matching accessories.</p>
             <div class="card__footer">
               <span class="price">₱129 <small>/ piece</small></span>
-              <button
-                class="btn btn--add"
-                onclick="addToCart('Sun & Earth Crochet Keychain', 129)"
-              >
-                Add to Cart
-              </button>
+              <button class="btn btn--add" onclick="addToCart('Sun & Earth Crochet Keychain', 129)">Add to Cart</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== CUSTOM BANNER ========== -->
     <section class="custom-banner" id="custom">
       <div class="custom-banner__text">
         <h2>Make it yours! 🎨</h2>
-        <p>
-          Every piece is handcrafted to order. Choose colors, add your own
-          design, or request something completely unique — we love a creative
-          challenge.
-        </p>
+        <p>Every piece is handcrafted to order. Choose colors, add your own design, or request something completely unique — we love a creative challenge.</p>
       </div>
-      <button class="btn btn--yellow" onclick="openCustomModal()">
-        Start a Custom Order →
-      </button>
+      <button class="btn btn--yellow" onclick="openCustomModal()">Start a Custom Order →</button>
     </section>
 
-    <!-- ========== FEATURES ========== -->
     <section class="features" id="about">
       <div class="feature">
         <div class="feature__icon">🧶</div>
@@ -389,49 +231,26 @@
       </div>
     </section>
 
-    <!-- ========== ABOUT PAGE ========== -->
     <section class="about-page" id="about">
       <div class="about-container">
         <div class="about-image">
           <img src="/image/lexi.jpg" alt="LexyKnots Crochet" />
         </div>
-
         <div class="about-content">
           <span class="about-tag">✨ About LexyKnots</span>
-
           <h2>Handcrafted Crochet Creations Made with Love 🧶</h2>
-
-          <p>
-            Welcome to <strong>LexyKnots</strong>, a small crochet business
-            dedicated to creating unique, handmade pieces that bring joy and
-            personality to everyday life.
-          </p>
-
-          <p>
-            Every item is carefully crocheted by hand, from adorable bucket hats
-            and beanies to custom keychains and flower bouquets. We believe that
-            handmade creations tell a story and make meaningful gifts for
-            yourself and your loved ones.
-          </p>
-
-          <p>
-            At LexyKnots, we love turning your ideas into reality through custom
-            crochet designs. Whether you're looking for a special gift, a cute
-            accessory, or a personalized creation, we're here to make something
-            truly unique just for you.
-          </p>
-
+          <p>Welcome to <strong>LexyKnots</strong>, a small crochet business dedicated to creating unique, handmade pieces that bring joy and personality to everyday life.</p>
+          <p>Every item is carefully crocheted by hand, from adorable bucket hats and beanies to custom keychains and flower bouquets. We believe that handmade creations tell a story and make meaningful gifts for yourself and your loved ones.</p>
+          <p>At LexyKnots, we love turning your ideas into reality through custom crochet designs. Whether you're looking for a special gift, a cute accessory, or a personalized creation, we're here to make something truly unique just for you.</p>
           <div class="about-stats">
             <div class="stat-box">
               <h3>100%</h3>
               <span>Handmade</span>
             </div>
-
             <div class="stat-box">
               <h3>Custom</h3>
               <span>Designs</span>
             </div>
-
             <div class="stat-box">
               <h3>PH</h3>
               <span>Nationwide</span>
@@ -441,31 +260,20 @@
       </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
     <footer class="site-footer">
       <div class="site-footer__logo">LexyKnots 🧶</div>
       <p>Handcrafted crochet pieces made with love 💕</p>
       <p class="site-footer__social">Follow us: <a href="#">@LexyKnots</a></p>
-
-      <!-- Ito ang binago -->
-      <p class="site-footer__copy">
-        © <span id="year"></span> LexyKnots. All rights reserved.
-      </p>
+      <p class="site-footer__copy">© <span id="year"></span> LexyKnots. All rights reserved.</p>
     </footer>
 
-    <!-- Nilagay ang taon gamit ang JavaScript -->
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
-    <!-- ========== MODALS ========== -->
-
-    <!-- Order Modal -->
     <div class="modal-overlay" id="order-modal">
       <div class="modal">
-        <button class="modal__close" onclick="closeModal('order-modal')">
-          ✕
-        </button>
+        <button class="modal__close" onclick="closeModal('order-modal')">✕</button>
         <h3>Place Your Order 🛒</h3>
         <label>Full Name</label>
         <input type="text" id="order-name" placeholder="Your name" />
@@ -474,23 +282,14 @@
         <label>Item</label>
         <input type="text" id="order-item" readonly />
         <label>Notes (color, size, customization)</label>
-        <textarea
-          id="order-notes"
-          rows="3"
-          placeholder="Any special requests?"
-        ></textarea>
-        <button class="btn btn--submit" onclick="submitOrder()">
-          Send Order ✨
-        </button>
+        <textarea id="order-notes" rows="3" placeholder="Any special requests?"></textarea>
+        <button class="btn btn--submit" onclick="submitOrder()">Send Order ✨</button>
       </div>
     </div>
 
-    <!-- Custom Order Modal -->
     <div class="modal-overlay" id="custom-modal">
       <div class="modal">
-        <button class="modal__close" onclick="closeModal('custom-modal')">
-          ✕
-        </button>
+        <button class="modal__close" onclick="closeModal('custom-modal')">✕</button>
         <h3>Custom Order 🎨</h3>
         <label>Full Name</label>
         <input type="text" id="custom-name" placeholder="Your name" />
@@ -504,35 +303,94 @@
           <option>Other / Surprise me!</option>
         </select>
         <label>Description & Color Preferences</label>
-        <textarea
-          id="custom-desc"
-          rows="3"
-          placeholder="Describe your dream piece..."
-        ></textarea>
-        <button class="btn btn--submit" onclick="submitCustom()">
-          Submit Request ✨
-        </button>
+        <textarea id="custom-desc" rows="3" placeholder="Describe your dream piece..."></textarea>
+        <button class="btn btn--submit" onclick="submitCustom()">Submit Request ✨</button>
       </div>
     </div>
 
-    <!-- Cart Modal -->
     <div class="modal-overlay" id="cart-modal">
       <div class="modal">
-        <button class="modal__close" onclick="closeModal('cart-modal')">
-          ✕
-        </button>
+        <button class="modal__close" onclick="closeModal('cart-modal')">✕</button>
         <h3>Your Cart 🛒</h3>
         <div id="cart-items"></div>
         <div class="cart-total">Total: ₱<span id="cart-total">0</span></div>
-        <button class="btn btn--submit" onclick="checkout()">
-          Checkout via DM →
+        <button class="btn btn--submit" onclick="openCheckout()">Proceed to Checkout →</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="checkout-modal">
+      <div class="modal" style="max-width: 480px; width: 90%;">
+        <button class="modal__close" onclick="closeModal('checkout-modal')">✕</button>
+        <div style="text-align:center; margin-bottom: 20px;">
+          <div style="font-size: 32px;">🧶</div>
+          <h3 style="margin: 6px 0 2px; color: #7c3aed;">Complete Your Order</h3>
+          <p style="margin: 0; color: #aaa; font-size: 13px;">Fill in your details below 💕</p>
+        </div>
+        <form id="checkout-form" onsubmit="event.preventDefault();">
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">
+              👤 Full Name <span style="color:#f472b6;">*</span>
+            </label>
+            <input type="text" id="checkout-name" placeholder="e.g. Maria Santos" style="width:100%; padding:10px 14px; border:1.5px solid #e9d5ff; border-radius:10px; font-size:14px; outline:none; box-sizing:border-box; background:#fdf4ff;" />
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">
+              📱 Contact / FB Messenger <span style="color:#f472b6;">*</span>
+            </label>
+            <input type="text" id="checkout-contact" placeholder="e.g. 09xxxxxxxxx or FB name" style="width:100%; padding:10px 14px; border:1.5px solid #e9d5ff; border-radius:10px; font-size:14px; outline:none; box-sizing:border-box; background:#fdf4ff;" />
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">
+              📧 Email Address <span style="color:#f472b6;">*</span>
+            </label>
+            <input type="email" id="checkout-email" placeholder="e.g. maria@gmail.com" style="width:100%; padding:10px 14px; border:1.5px solid #e9d5ff; border-radius:10px; font-size:14px; outline:none; box-sizing:border-box; background:#fdf4ff;" />
+          </div>
+          <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">
+              📦 Delivery Address <span style="color:#f472b6;">*</span>
+            </label>
+            <textarea id="checkout-address" rows="2" placeholder="e.g. 123 Rizal St., Cabanatuan City" style="width:100%; padding:10px 14px; border:1.5px solid #e9d5ff; border-radius:10px; font-size:14px; outline:none; box-sizing:border-box; background:#fdf4ff; resize:none;"></textarea>
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label style="display:block; font-size:11px; color:#9ca3af; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">
+              📝 Order Notes <span style="color:#aaa; font-weight:normal;">(Optional)</span>
+            </label>
+            <textarea id="checkout-notes" rows="2" placeholder="e.g. Color preference, size, special requests..." style="width:100%; padding:10px 14px; border:1.5px solid #e9d5ff; border-radius:10px; font-size:14px; outline:none; box-sizing:border-box; background:#fdf4ff; resize:none;"></textarea>
+          </div>
+          <button type="button" id="checkout-submit-btn" onclick="checkout()" style="width:100%; padding:14px; background:linear-gradient(135deg, #c084fc, #f472b6); color:white; border:none; border-radius:12px; font-size:15px; font-weight:bold; cursor:pointer; letter-spacing:0.5px;">
+            Place Order 💕
+          </button>
+        </form>
+      </div>
+    </div>
+     
+    <div class="modal-overlay" id="success-modal">
+      <div class="modal" style="max-width: 400px; text-align:center;">
+        <div style="font-size: 56px; margin-bottom: 10px;">🎉</div>
+        <h3 style="color: #7c3aed; margin: 0 0 8px;">Order Placed!</h3>
+        <p style="color: #555; margin: 0 0 16px; font-size: 14px;">
+          Thank you for your order! We'll contact you soon via FB Messenger or email to confirm. 💕
+        </p>
+        <div style="background: linear-gradient(135deg, #c084fc, #f472b6); border-radius: 50px; display:inline-block; padding: 10px 28px; margin-bottom: 20px;">
+          <span style="color:white; font-weight:bold; font-size:15px; letter-spacing:1px;">
+            Order ID: <span id="success-order-id"></span>
+          </span>
+        </div>
+        <p style="color: #aaa; font-size: 12px; margin: 0 0 16px;">
+          Screenshot this for your reference!
+        </p>
+        <button onclick="closeModal('success-modal')" style="width:100%; padding:12px; background:linear-gradient(135deg, #c084fc, #f472b6); color:white; border:none; border-radius:12px; font-size:14px; font-weight:bold; cursor:pointer;">
+          Done ✨
         </button>
       </div>
     </div>
 
-    <!-- Toast Notification -->
     <div class="toast" id="toast"></div>
 
     <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init("7Fs5oqC8Z-LA8TRxR");
+    </script>
   </body>
 </html>
