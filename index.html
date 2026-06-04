@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LexyKnots – Handcrafted Crochet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <a href="#" class="logo">
+        <img src="/image/logo.jpg" alt="LexyKnots Logo" />
+        <span>LexyKnots</span>
+      </a>
+      <nav class="nav">
+        <a href="#products">Shop</a>
+        <a href="#custom">Custom</a>
+        <a href="#about">About</a>
+        <button class="cart-btn" onclick="openCart()">
+          🛒 Cart (<span id="cart-count">0</span>)
+        </button>
+      </nav>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+      <span class="floatie" style="top: 10%; left: 5%; animation-delay: 0s"
+        >🍓</span
+      >
+      <span class="floatie" style="top: 15%; right: 8%; animation-delay: 0.5s"
+        >🌸</span
+      >
+      <span class="floatie" style="bottom: 20%; left: 12%; animation-delay: 1s"
+        >⭐</span
+      >
+      <span
+        class="floatie"
+        style="bottom: 15%; right: 5%; animation-delay: 1.5s"
+        >🌈</span
+      >
+
+      <div class="hero__badge">✨ Handmade with love in the Philippines</div>
+      <h1 class="hero__title">Crochet that tells<br />your story 🧶</h1>
+      <p class="hero__subtitle">
+        Adorable hats, beanies, and keychains — all handcrafted and fully
+        customizable just for you.
+      </p>
+      <button
+        class="btn btn--dark"
+        onclick="
+          document
+            .getElementById('products')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        Shop Now →
+      </button>
+    </section>
+
+    <!-- ========== CATEGORY FILTER ========== -->
+    <div class="categories">
+      <button class="cat-pill active" onclick="filterCat('all', this)">
+        All Items
+      </button>
+      <button class="cat-pill" onclick="filterCat('bucket-hat', this)">
+        Bucket Hats
+      </button>
+      <button class="cat-pill" onclick="filterCat('beanie', this)">
+        Beanies
+      </button>
+      <button class="cat-pill" onclick="filterCat('keychain', this)">
+        Keychains
+      </button>
+      <button class="cat-pill" onclick="filterCat('custom', this)">
+        Custom Orders
+      </button>
+    </div>
+
+    <!-- ========== PRODUCTS ========== -->
+    <section class="products" id="products">
+      <div class="section-title">
+        <h2>Our Collection 💕</h2>
+        <p>Pre-order, on-hand, and custom pieces available</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- Card 1 -->
+        <div class="card" data-cat="crochet-flower">
+          <div class="card__img-wrap">
+            <img
+              src="/image/tulips.jpg"
+              alt="Crochet Flower Bouquet"
+              class="card__img"
+            />
+            <span class="badge badge--preorder">Pre-Order</span>
+          </div>
+
+          <div class="card__body">
+            <h3 class="card__name">Crochet Flower Bouquet</h3>
+            <p class="card__desc">
+              Handmade crochet flower bouquet featuring sunflower, tulip, and
+              rose designs. A perfect gift for birthdays, anniversaries, and
+              special occasions.
+            </p>
+
+            <div class="card__footer">
+              <span class="price">₱299 <small>/ bouquet</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Crochet Flower Bouquet', 299)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-cat="bucket-hat">
+          <div class="card__img-wrap">
+            <img
+              src="/image/buckethat.jpg"
+              alt="Strawberry Bucket Hat"
+              class="card__img card__img--bottom"
+            />
+            <span class="badge badge--preorder">Pre-Order</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">Strawberry Bucket Hat</h3>
+            <p class="card__desc">
+              Red, peach & white strawberry-themed hats with polka dots and leaf
+              detail.
+            </p>
+            <div class="card__footer">
+              <span class="price">₱400 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Strawberry Bucket Hat', 400)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-cat="bucket-hat">
+          <div class="card__img-wrap">
+            <img
+              src="/image/strawberry-shortcake.jpg"
+              alt="Strawberry Shortcake Hat"
+              class="card__img"
+            />
+            <span class="badge badge--preorder">Pre-Order</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">Strawberry Shortcake Hat</h3>
+            <p class="card__desc">
+              White bucket hat with cherry & stem detail. Choose or customize
+              your base color!
+            </p>
+            <div class="card__footer">
+              <span class="price">₱400 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Strawberry Shortcake Hat', 400)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" data-cat="beanie">
+          <div class="card__img-wrap">
+            <img
+              src="/image/spiderman.jpg"
+              alt="Spiderman Beanie"
+              class="card__img"
+            />
+            <span class="badge badge--preorder">Pre-Order</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">Spiderman Beanie</h3>
+            <p class="card__desc">
+              Red, black, or white base with iconic Spiderman eye detail. Pick
+              your Spidey!
+            </p>
+            <div class="card__footer">
+              <span class="price">₱450 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Spiderman Beanie', 450)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" data-cat="bucket-hat custom">
+          <div class="card__img-wrap">
+            <img
+              src="/image/sunflower-hat.jpg"
+              alt="Custom Sunflower Bucket Hat"
+              class="card__img"
+            />
+            <span class="badge badge--custom">Custom</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">Custom Sunflower Bucket Hat</h3>
+            <p class="card__desc">
+              Any color base with a hand-crocheted sunflower appliqué. Fully
+              customizable!
+            </p>
+            <div class="card__footer">
+              <span class="price">₱450 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Custom Sunflower Bucket Hat', 450)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" data-cat="bucket-hat">
+          <div class="card__img-wrap">
+            <img
+              src="/image/bear.jpg"
+              alt="We Bare Bears Panda Hat"
+              class="card__img"
+            />
+            <span class="badge badge--onhand">On Hand</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">We Bare Bears Panda Hat</h3>
+            <p class="card__desc">
+              Iconic panda face bucket hat crocheted in black & white. Ready to
+              ship!
+            </p>
+            <div class="card__footer">
+              <span class="price">₱500 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Panda Bucket Hat', 500)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card" data-cat="keychain custom">
+          <div class="card__img-wrap">
+            <img
+              src="/image/character.jpg"
+              alt="Character Keychain"
+              class="card__img"
+            />
+            <span class="badge badge--custom">Custom</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__name">Character Keychain</h3>
+            <p class="card__desc">
+              Adorable chibi-style crochet heads. Customize hair, skin tone, and
+              features!
+            </p>
+            <div class="card__footer">
+              <span class="price">₱250 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Character Keychain', 250)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card" data-cat="keychain">
+          <div class="card__img-wrap">
+            <img
+              src="/image/keychain-tulips.jpg"
+              alt="Crochet Tulip Keychain"
+              class="card__img"
+            />
+            <span class="badge badge--new">New</span>
+          </div>
+
+          <div class="card__body">
+            <h3 class="card__name">Crochet Tulip Keychain</h3>
+            <p class="card__desc">
+              Handmade crochet tulip keychains available in various colors.
+              Perfect for bags, keys, giveaways, and special gifts.
+            </p>
+
+            <div class="card__footer">
+              <span class="price">₱99 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Crochet Tulip Keychain', 99)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="card" data-cat="keychain">
+          <div class="card__img-wrap">
+            <img
+              src="/image/sun-earth-keychain.jpg"
+              alt="Sun and Earth Crochet Keychain"
+              class="card__img"
+            />
+            <span class="badge badge--new">New</span>
+          </div>
+
+          <div class="card__body">
+            <h3 class="card__name">Sun & Earth Crochet Keychain</h3>
+            <p class="card__desc">
+              Handmade crochet sun and earth keychains with cute smiling faces.
+              Perfect for bags, keys, gifts, and matching accessories.
+            </p>
+
+            <div class="card__footer">
+              <span class="price">₱129 <small>/ piece</small></span>
+              <button
+                class="btn btn--add"
+                onclick="addToCart('Sun & Earth Crochet Keychain', 129)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CUSTOM BANNER ========== -->
+    <section class="custom-banner" id="custom">
+      <div class="custom-banner__text">
+        <h2>Make it yours! 🎨</h2>
+        <p>
+          Every piece is handcrafted to order. Choose colors, add your own
+          design, or request something completely unique — we love a creative
+          challenge.
+        </p>
+      </div>
+      <button class="btn btn--yellow" onclick="openCustomModal()">
+        Start a Custom Order →
+      </button>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="features" id="about">
+      <div class="feature">
+        <div class="feature__icon">🧶</div>
+        <h4>100% Handmade</h4>
+        <p>Every stitch crafted with care and love</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">🎨</div>
+        <h4>Fully Customizable</h4>
+        <p>Pick your colors, patterns, and designs</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">📦</div>
+        <h4>Ships Nationwide</h4>
+        <p>Delivery anywhere in the Philippines</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">💬</div>
+        <h4>Chat with Us</h4>
+        <p>DM @LexyKnots for orders & inquiries</p>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT PAGE ========== -->
+    <section class="about-page" id="about">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="/image/lexi.jpg" alt="LexyKnots Crochet" />
+        </div>
+
+        <div class="about-content">
+          <span class="about-tag">✨ About LexyKnots</span>
+
+          <h2>Handcrafted Crochet Creations Made with Love 🧶</h2>
+
+          <p>
+            Welcome to <strong>LexyKnots</strong>, a small crochet business
+            dedicated to creating unique, handmade pieces that bring joy and
+            personality to everyday life.
+          </p>
+
+          <p>
+            Every item is carefully crocheted by hand, from adorable bucket hats
+            and beanies to custom keychains and flower bouquets. We believe that
+            handmade creations tell a story and make meaningful gifts for
+            yourself and your loved ones.
+          </p>
+
+          <p>
+            At LexyKnots, we love turning your ideas into reality through custom
+            crochet designs. Whether you're looking for a special gift, a cute
+            accessory, or a personalized creation, we're here to make something
+            truly unique just for you.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-box">
+              <h3>100%</h3>
+              <span>Handmade</span>
+            </div>
+
+            <div class="stat-box">
+              <h3>Custom</h3>
+              <span>Designs</span>
+            </div>
+
+            <div class="stat-box">
+              <h3>PH</h3>
+              <span>Nationwide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="site-footer__logo">LexyKnots 🧶</div>
+      <p>Handcrafted crochet pieces made with love 💕</p>
+      <p class="site-footer__social">Follow us: <a href="#">@LexyKnots</a></p>
+
+      <!-- Ito ang binago -->
+      <p class="site-footer__copy">
+        © <span id="year"></span> LexyKnots. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- Nilagay ang taon gamit ang JavaScript -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- ========== MODALS ========== -->
+
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="order-modal">
+      <div class="modal">
+        <button class="modal__close" onclick="closeModal('order-modal')">
+          ✕
+        </button>
+        <h3>Place Your Order 🛒</h3>
+        <label>Full Name</label>
+        <input type="text" id="order-name" placeholder="Your name" />
+        <label>Contact / FB Messenger</label>
+        <input type="text" id="order-contact" placeholder="Phone or FB name" />
+        <label>Item</label>
+        <input type="text" id="order-item" readonly />
+        <label>Notes (color, size, customization)</label>
+        <textarea
+          id="order-notes"
+          rows="3"
+          placeholder="Any special requests?"
+        ></textarea>
+        <button class="btn btn--submit" onclick="submitOrder()">
+          Send Order ✨
+        </button>
+      </div>
+    </div>
+
+    <!-- Custom Order Modal -->
+    <div class="modal-overlay" id="custom-modal">
+      <div class="modal">
+        <button class="modal__close" onclick="closeModal('custom-modal')">
+          ✕
+        </button>
+        <h3>Custom Order 🎨</h3>
+        <label>Full Name</label>
+        <input type="text" id="custom-name" placeholder="Your name" />
+        <label>Contact / FB Messenger</label>
+        <input type="text" id="custom-contact" placeholder="Phone or FB name" />
+        <label>What would you like?</label>
+        <select id="custom-type">
+          <option>Custom Bucket Hat</option>
+          <option>Custom Beanie</option>
+          <option>Character Keychain</option>
+          <option>Other / Surprise me!</option>
+        </select>
+        <label>Description & Color Preferences</label>
+        <textarea
+          id="custom-desc"
+          rows="3"
+          placeholder="Describe your dream piece..."
+        ></textarea>
+        <button class="btn btn--submit" onclick="submitCustom()">
+          Submit Request ✨
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cart-modal">
+      <div class="modal">
+        <button class="modal__close" onclick="closeModal('cart-modal')">
+          ✕
+        </button>
+        <h3>Your Cart 🛒</h3>
+        <div id="cart-items"></div>
+        <div class="cart-total">Total: ₱<span id="cart-total">0</span></div>
+        <button class="btn btn--submit" onclick="checkout()">
+          Checkout via DM →
+        </button>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
